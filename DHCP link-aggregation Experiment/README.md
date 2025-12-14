@@ -46,7 +46,8 @@ With the aggregated links established, the DHCP services and VLAN configurations
 * **DHCP:** Configure multiple DHCP pools, with each pool corresponding to a separate VLAN/subnet, ensuring the correct default gateway is specified.
 * **Trunks:** Configure the Port-Channel interfaces as **Trunk** ports to carry all VLAN traffic.
 
-![DHCP and Trunk Configuration on Switch0](images/Switch0_port-channel1.png)
+> The image below details the specific DHCP IP ranges and pool configurations set up on Switch0.
+![DHCP Configuration Details on Switch0](images/switch0_dhcp.png)
 
 ### 4. Access Layer Configuration
 
