@@ -24,7 +24,7 @@ The first step involves establishing the gateway connection and setting up the d
 * **Goal:** Set the initial IP connectivity between the Router and Switch0.
 * **Verification:** Ensure Switch0 can successfully ping the Router's IP address.
 
-![Router and Switch IP Configuration](images/router ip.png)
+![Router and Switch IP Configuration](images/router_ip.png)
 
 ### 2. Configuring Link Aggregation (EtherChannel)
 
@@ -32,12 +32,12 @@ Link Aggregation (EtherChannel) is implemented between the Distribution Switch (
 
 * **Configuration:** Group the links connecting Switch0 to Switch1 into **Port-Channel Group 1**. Group the links connecting Switch0 to Switch2 into **Port-Channel Group 2**.
 
-![Switch0 Port-Channel 1 Configuration](images/Switch0 port-channel1.png)
-![Switch0 Port-Channel 2 Configuration](images/Switch0 port-channel2.png)
+![Switch0 Port-Channel 1 Configuration](images/Switch0_port-channel1.png)
+![Switch0 Port-Channel 2 Configuration](images/Switch0_port-channel2.png)
 
 * **Verification:** Confirm that both Port-Channel groups are successfully established and operating.
 
-![Verifying Port-Channel Status](images/two port-channel.png)
+![Verifying Port-Channel Status](images/two_port-channel.png)
 
 ### 3. DHCP and VLAN Setup on the Distribution Switch
 
@@ -46,7 +46,7 @@ With the aggregated links established, the DHCP services and VLAN configurations
 * **DHCP:** Configure multiple DHCP pools, with each pool corresponding to a separate VLAN/subnet, ensuring the correct default gateway is specified.
 * **Trunks:** Configure the Port-Channel interfaces as **Trunk** ports to carry all VLAN traffic.
 
-![DHCP and Trunk Configuration on Switch0](images/Switch0 port-channel1.png)
+![DHCP and Trunk Configuration on Switch0](images/Switch0_port-channel1.png)
 
 ### 4. Access Layer Configuration
 
@@ -54,7 +54,7 @@ The two Access Switches (Switch1 and Switch2) operate purely at Layer 2. Their p
 
 * **Configuration:** Configure the necessary VLANs on these switches, and assign the PC-facing interfaces as **Access Ports** to the correct VLANs.
 
-![Switch1 VLAN and Access Port Settings](images/Switch1 Setting.png)
+![Switch1 VLAN and Access Port Settings](images/Switch1_Setting.png)
 
 ### 5. Final Connectivity Verification
 
@@ -62,4 +62,4 @@ After all configurations are complete, the final step is to verify end-to-end co
 
 * **Verification:** Ensure all PCs successfully obtain IP addresses via DHCP and are able to ping the external network's gateway (the Router's IP address).
 
-![PC Ping Verification to External Router](images/pc ping external.png)
+![PC Ping Verification to External Router](images/pc_ping_external.png)
